@@ -1,0 +1,47 @@
+{
+    "schemaName": "transaction_facts",
+    "dimensionFieldSpecs": [
+        {
+            "name": "transaction_id",
+            "dataType": "string"
+        },
+        {
+            "name": "account_id",
+            "dataType": "string"
+        },
+        {
+            "name": "customer_id",
+            "dataType": "string"
+        },
+        {
+            "name": "transaction_type",
+            "dataType": "string"
+        },
+        {
+            "name": "currency",
+            "dataType": "string"
+        },
+        {
+            "name": "branch_id",
+            "dataType": "string"
+        }
+    ],
+    "metricFieldSpecs": [
+        {
+            "name": "transaction_amount",
+            "dataType": "double"
+        },
+        {
+            "name": "transaction_rate",
+            "dataType": "float"
+        }
+    ],
+    "dateTimeFieldSpecs": [
+        {
+            "name": "transaction_date",
+            "dataType": "TIMESTAMP",
+            "format": "1:MILLISECONDS:EPOCH",
+            "granularity": "1:MILLISECONDS"
+        }
+    ]
+}

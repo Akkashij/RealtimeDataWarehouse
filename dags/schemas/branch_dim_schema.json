@@ -1,0 +1,34 @@
+{
+    "schemaName": "branch_dim",
+    "dimensionFieldSpecs": [
+        {
+            "name": "branch_id",
+            "dataType": "string"
+        },
+        {
+            "name": "branch_name",
+            "dataType": "string"
+        },
+        {
+            "name": "branch_address",
+            "dataType": "string"
+        },
+        {
+            "name": "city", 
+            "dataType": "string"
+        },
+        {
+            "name": "state",
+            "dataType": "string"
+        },
+        {
+            "name": "zip_code",
+            "dataType": "string"
+        },
+        {
+            "name": "opening_date",
+            "dataType": "TIMESTAMP"
+        }
+    ],
+    "metricFieldSpecs": []
+}

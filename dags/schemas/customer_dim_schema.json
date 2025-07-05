@@ -1,0 +1,30 @@
+{
+    "schemaName": "customer_dim",
+    "dimensionFieldSpecs": [
+        {
+            "name": "customer_id",
+            "dataType": "string"
+        },
+        {
+            "name": "first_name",
+            "dataType": "string"
+        },
+        {
+            "name": "last_name",
+            "dataType": "string"
+        },
+        {
+            "name": "email",
+            "dataType": "string"
+        },
+        {
+            "name": "phone_number",
+            "dataType": "string"
+        },
+        {
+            "name": "registration_date",
+            "dataType": "TIMESTAMP"
+        }
+    ],
+    "metricFieldSpecs": []
+}
