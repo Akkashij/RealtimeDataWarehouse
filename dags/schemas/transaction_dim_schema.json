@@ -3,37 +3,37 @@
     "dimensionFieldSpecs": [
         {
             "name": "transaction_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "account_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "customer_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "transaction_type",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "currency",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "branch_id",
-            "dataType": "string"
+            "dataType": "STRING"
         }
     ],
     "metricFieldSpecs": [
         {
             "name": "transaction_amount",
-            "dataType": "double"
+            "dataType": "DOUBLE"
         },
         {
-            "name": "transaction_rate",
-            "dataType": "float"
+            "name": "exchange_rate",
+            "dataType": "FLOAT"
         }
     ],
     "dateTimeFieldSpecs": [

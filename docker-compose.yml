@@ -16,6 +16,7 @@ x-airflow-common:
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
+    AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT: 90
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
@@ -43,7 +44,7 @@ x-airflow-common:
 services:
 
   zookeeper:    
-    image: confluentinc/cp-zookeeper:7.2.15
+    image: confluentinc/cp-zookeeper:7.4.0
     hostname: zookeeper
     container_name: zookeeper
     restart: unless-stopped
@@ -306,6 +307,7 @@ services:
     ports:
       - "9000:9000"
     environment:
+      PLUGIN_INCLUDE: "kafka"
       JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx1G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
     depends_on:
       - zookeeper
@@ -326,6 +328,7 @@ services:
     ports:
       - "8099:8099"
     environment:
+      PLUGIN_INCLUDE: "kafka"
       JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx1G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-broker.log"
     depends_on:
       pinot-controller:
@@ -346,7 +349,9 @@ services:
     restart: unless-stopped
     ports:
       - "8098:8098"
+      - "8097:8097"
     environment:
+      PLUGIN_INCLUDE: "kafka"
       JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx1G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-server.log"
     depends_on:
       pinot-broker:

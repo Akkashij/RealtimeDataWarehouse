@@ -3,27 +3,27 @@
     "dimensionFieldSpecs": [
         {
             "name": "branch_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "branch_name",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "branch_address",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "city", 
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "state",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "zip_code",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "opening_date",

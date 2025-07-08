@@ -1,7 +1,7 @@
 {
     "tableName": "account_dim",
     "tableType": "OFFLINE",
-    "segmentConfig": {
+    "segmentsConfig": {
         "replication": "1",
         "schemaName": "account_dim"
     },
@@ -13,7 +13,7 @@
         "loadMode": "MMAP",
         "invertedIndexColumns": [
             "account_type",
-            "STATUS"
+            "status"
         ],
         "sortColumns": ["account_id"]
     },

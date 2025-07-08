@@ -1,7 +1,7 @@
 {
     "tableName": "transaction_facts",
     "tableType": "REALTIME",
-    "segmentConfig": {
+    "segmentsConfig": {
         "timeColumnName": "transaction_date",
         "timeType": "MILLISECONDS",
         "replication": "1",
@@ -15,7 +15,7 @@
         "loadMode": "MMAP",
         "invertedIndexColumns": [
             "transaction_type",
-            "curency",
+            "currency",
             "branch_id"
         ],
         "sortColumns": ["transaction_date"]
@@ -26,16 +26,16 @@
                 {
                     "realtime.segment.flush.threshold.rows": "0",
                     "stream.kafka.decoder.prop.format": "JSON",
-                    "key.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+                    "key.serializer": "org.apache.kafka.common.serialization.ByteArraySerializer",
                     "stream.kafka.decoder.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaJSONMessageDecoder",
                     "streamType": "kafka",
-                    "value.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+                    "value.serializer": "org.apache.kafka.common.serialization.ByteArraySerializer",
                     "stream.kafka.consumer.type": "LOWLEVEL",
-                    "realtime.segment.flush.threshold.segment.rows": "500",
-                    "stream.kafka.broker.list": "localhost:9092",
+                    "realtime.segment.flush.threshold.segment.rows": "50000",
+                    "stream.kafka.broker.list": "kafka_broker:9092",
                     "realtime.segment.flush.threshold.time": "3600000",
-                    "stream.kafka.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaLowLevelConsumerFactory",
-                    "stream.kafka.cónumer.prop.auto.offset.reset": "smallest",
+                    "stream.kafka.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kafka20.KafkaConsumerFactory",
+                    "stream.kafka.consumer.prop.auto.offset.reset": "smallest",
                     "stream.kafka.topic.name": "transaction_facts"
                 }
             ]

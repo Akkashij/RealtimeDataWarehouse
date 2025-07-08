@@ -3,15 +3,15 @@
     "dimensionFieldSpecs": [
         {
             "name": "account_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "account_type",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "customer_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "opening_date",
@@ -19,13 +19,13 @@
         },
         {
             "name": "status",
-            "dataType": "string"
+            "dataType": "STRING"
         }
     ],
     "metricFieldSpecs": [
         {
             "name": "balance",
-            "dataType": "double"
+            "dataType": "DOUBLE"
         }
     ]
 }

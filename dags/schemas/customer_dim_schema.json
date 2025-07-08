@@ -3,23 +3,23 @@
     "dimensionFieldSpecs": [
         {
             "name": "customer_id",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "first_name",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "last_name",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "email",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "phone_number",
-            "dataType": "string"
+            "dataType": "STRING"
         },
         {
             "name": "registration_date",

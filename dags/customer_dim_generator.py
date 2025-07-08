@@ -1,7 +1,7 @@
 import random
 from datetime import datetime, timedelta
 import pandas as pd
-from airflow import DAG
+from airflow.sdk import DAG
 from airflow.providers.standard.operators.empty import EmptyOperator
 from airflow.providers.standard.operators.python import PythonOperator
 
@@ -57,7 +57,7 @@ def generate_customer_dim_data():
         'last_name': last_names,
         "email": emails,
         "phone_number": phone_numbers,
-        "registration_date_millis": registration_dates
+        "registration_date": registration_dates
     })
 
     df.to_csv(output_file, index=False)
