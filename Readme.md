@@ -1,7 +1,7 @@
 
 # 💳 Real-Time Data Warehouse for Financial Transactions
 
-This project builds a Real-Time Data Warehouse System for financial transaction data using modern data stack technologies including Apache Airflow, Redpanda, Apache Pinot, PostgreSQL, and Apache Superset.
+Dự án này xây dựng một hệ thống Kho Dữ Liệu Thời Gian Thực cho dữ liệu giao dịch tài chính, sử dụng các công nghệ hiện đại trong hệ sinh thái dữ liệu như Apache Airflow, Redpanda, Apache Pinot, PostgreSQL và Apache Superset.
 
 ---
 
