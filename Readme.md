@@ -72,8 +72,8 @@ Chứa các dữ liệu chính về giao dịch:
 
 ### 1. Clone dự án:
 ```bash
-git clone https://github.com/your-org/financial-rt-data-warehouse.git
-cd financial-rt-data-warehouse
+git git@github.com:Akkashij/RealtimeDataWarehouse.git
+cd RealtimeDataWarehous
 ```
 
 ### 2. Khởi chạy docker-compose:
